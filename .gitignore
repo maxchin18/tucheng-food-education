@@ -1,0 +1,4 @@
+_workdir/
+*.docx
+.DS_Store
+Thumbs.db

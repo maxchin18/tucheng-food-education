@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>土城國小 — 食農教育</title>
+  <title>土城國小 — 食農教育｜洄海田心學堂</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     /* ── Reset ── */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -73,8 +73,6 @@
         radial-gradient(ellipse at 20% 80%, rgba(255,243,224,0.5) 0%, transparent 60%),
         radial-gradient(ellipse at 80% 20%, rgba(200,230,201,0.6) 0%, transparent 50%);
     }
-
-    /* Floating decorative elements */
     .hero-deco {
       position: absolute; border-radius: 50%; opacity: 0.15;
     }
@@ -94,7 +92,7 @@
       animation: float 12s ease-in-out infinite 2s;
     }
     .hero-deco:nth-child(4) {
-      width: 100px; height: 100px; background: #ffc107;
+      width: 100px; height: 100px; background: #0288d1;
       bottom: 25%; right: 15%;
       animation: float 9s ease-in-out infinite 1s;
     }
@@ -123,11 +121,18 @@
       font-size: clamp(2.5rem, 7vw, 5rem);
       font-weight: 900; line-height: 1.2;
       color: #2e7d32;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero-sub {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      color: #1b5e20; font-weight: 400;
+      letter-spacing: 0.15em; margin-bottom: 1.5rem;
+      opacity: 0.8;
     }
     .hero p {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: #3e6b41; max-width: 560px; margin: 0 auto 2.5rem;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: #3e6b41; max-width: 620px; margin: 0 auto 2.5rem;
       line-height: 1.8; font-weight: 300;
     }
     .hero-cta {
@@ -175,7 +180,7 @@
     }
     .section-header p {
       font-size: 1.05rem; color: #666;
-      max-width: 600px; margin: 0 auto; line-height: 1.8;
+      max-width: 650px; margin: 0 auto; line-height: 1.8;
     }
 
     /* ── About ── */
@@ -207,9 +212,7 @@
     .about-stats {
       display: flex; gap: 2rem;
     }
-    .stat {
-      text-align: center;
-    }
+    .stat { text-align: center; }
     .stat-number {
       font-size: 2.2rem; font-weight: 900; color: #4caf50;
     }
@@ -240,8 +243,8 @@
       margin: 0 auto 1.5rem; font-size: 2.5rem;
     }
     .feature-card:nth-child(1) .feature-icon { background: #e8f5e9; }
-    .feature-card:nth-child(2) .feature-icon { background: #fff3e0; }
-    .feature-card:nth-child(3) .feature-icon { background: #e3f2fd; }
+    .feature-card:nth-child(2) .feature-icon { background: #e3f2fd; }
+    .feature-card:nth-child(3) .feature-icon { background: #fff3e0; }
     .feature-card:nth-child(4) .feature-icon { background: #fce4ec; }
     .feature-card h3 {
       font-size: 1.25rem; font-weight: 700; color: #333;
@@ -251,7 +254,244 @@
       font-size: 0.95rem; color: #777; line-height: 1.8;
     }
 
-    /* ── Gallery ── */
+    /* ══════════════════════════════════════════
+       ── 洄海田心學堂 — 食農教室建置 ──
+       ══════════════════════════════════════════ */
+
+    .classroom { background: #fff; position: relative; overflow: hidden; }
+    .classroom::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 6px;
+      background: linear-gradient(90deg, #2e7d32, #0288d1, #4caf50, #ff9800);
+    }
+
+    /* 學堂名稱大標 */
+    .classroom-hero {
+      text-align: center; margin-bottom: 4rem;
+      padding: 2rem 0;
+    }
+    .classroom-hero .ch-label {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1rem; color: #0288d1;
+      letter-spacing: 0.3em; margin-bottom: 1rem;
+    }
+    .classroom-hero h2 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 900; color: #1b5e20;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #1b5e20, #0277bd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .classroom-hero p {
+      font-size: 1.1rem; color: #555;
+      max-width: 700px; margin: 0 auto;
+      line-height: 2;
+    }
+
+    /* 理念卡片 */
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem; max-width: 1000px; margin: 0 auto 4rem;
+    }
+    .concept-card {
+      background: linear-gradient(135deg, #f8fffe, #eef7f0);
+      border-radius: 20px; padding: 2.5rem;
+      border-left: 4px solid;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+    .concept-card:nth-child(1) { border-color: #0288d1; }
+    .concept-card:nth-child(2) { border-color: #4caf50; }
+    .concept-card:nth-child(3) { border-color: #ff9800; }
+    .concept-card:nth-child(4) { border-color: #e91e63; }
+    .concept-card .cc-icon {
+      font-size: 2.5rem; margin-bottom: 1rem;
+    }
+    .concept-card h3 {
+      font-size: 1.2rem; font-weight: 700; color: #333;
+      margin-bottom: 0.8rem;
+    }
+    .concept-card p {
+      font-size: 0.95rem; color: #666; line-height: 1.9;
+    }
+
+    /* 空間設計理念 */
+    .space-design {
+      max-width: 1100px; margin: 0 auto 4rem;
+    }
+    .space-design h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.8rem; font-weight: 700;
+      color: #1b5e20; text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+    .space-design h3::after {
+      content: '';
+      display: block; width: 60px; height: 3px;
+      background: linear-gradient(90deg, #2e7d32, #0288d1);
+      margin: 0.8rem auto 0;
+      border-radius: 2px;
+    }
+    .space-zones {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; margin-bottom: 3rem;
+    }
+    .zone-card {
+      text-align: center; padding: 2rem 1.2rem;
+      background: #f9f9f9; border-radius: 16px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .zone-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .zone-card .zone-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%; margin: 0 auto 1rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+    }
+    .zone-card:nth-child(1) .zone-icon { background: #e8f5e9; }
+    .zone-card:nth-child(2) .zone-icon { background: #e3f2fd; }
+    .zone-card:nth-child(3) .zone-icon { background: #fff3e0; }
+    .zone-card:nth-child(4) .zone-icon { background: #fce4ec; }
+    .zone-card h4 {
+      font-size: 1.05rem; font-weight: 700; color: #333;
+      margin-bottom: 0.5rem;
+    }
+    .zone-card p {
+      font-size: 0.85rem; color: #888; line-height: 1.6;
+    }
+
+    /* 美學設計元素 */
+    .aesthetic-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; max-width: 1000px; margin: 0 auto 4rem;
+    }
+    .aes-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.5rem;
+      background: #fff; border-radius: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s;
+    }
+    .aes-item:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+    .aes-item .aes-dot {
+      flex-shrink: 0;
+      width: 10px; height: 10px; border-radius: 50%;
+      margin-top: 6px;
+    }
+    .aes-item:nth-child(1) .aes-dot { background: #0288d1; }
+    .aes-item:nth-child(2) .aes-dot { background: #4caf50; }
+    .aes-item:nth-child(3) .aes-dot { background: #ff9800; }
+    .aes-item:nth-child(4) .aes-dot { background: #e91e63; }
+    .aes-item:nth-child(5) .aes-dot { background: #9c27b0; }
+    .aes-item:nth-child(6) .aes-dot { background: #00897b; }
+    .aes-item .aes-text h4 {
+      font-size: 0.95rem; font-weight: 700; color: #333;
+      margin-bottom: 0.3rem;
+    }
+    .aes-item .aes-text p {
+      font-size: 0.85rem; color: #888; line-height: 1.6;
+    }
+
+    /* ── 照片藝廊 (食農教室) ── */
+    .classroom-gallery {
+      max-width: 1100px; margin: 0 auto;
+    }
+    .classroom-gallery h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.8rem; font-weight: 700;
+      color: #1b5e20; text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .classroom-gallery h3::after {
+      content: '';
+      display: block; width: 60px; height: 3px;
+      background: linear-gradient(90deg, #2e7d32, #0288d1);
+      margin: 0.8rem auto 0;
+      border-radius: 2px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 0.8rem;
+    }
+    .photo-grid .photo-item {
+      border-radius: 12px; overflow: hidden;
+      position: relative; cursor: pointer;
+    }
+    .photo-grid .photo-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .photo-grid .photo-item:hover img {
+      transform: scale(1.08);
+    }
+    .photo-grid .photo-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .photo-grid .photo-item:hover::after { opacity: 1; }
+
+    /* Featured large photos */
+    .photo-grid .photo-item:nth-child(1) { grid-column: span 2; }
+    .photo-grid .photo-item:nth-child(7) { grid-column: span 2; }
+
+    /* ── 場域合作 ── */
+    .collaboration { background: #f0f7f1; }
+    .collab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem; max-width: 1100px; margin: 0 auto;
+    }
+    .collab-card {
+      background: #fff; border-radius: 20px;
+      padding: 2rem; text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .collab-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+    .collab-icon {
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.2rem; font-size: 2rem;
+    }
+    .collab-card:nth-child(1) .collab-icon { background: #e3f2fd; }
+    .collab-card:nth-child(2) .collab-icon { background: #e8f5e9; }
+    .collab-card:nth-child(3) .collab-icon { background: #fff3e0; }
+    .collab-card:nth-child(4) .collab-icon { background: #f3e5f5; }
+    .collab-card:nth-child(5) .collab-icon { background: #e0f2f1; }
+    .collab-card h3 {
+      font-size: 1.1rem; font-weight: 700; color: #333;
+      margin-bottom: 0.6rem;
+    }
+    .collab-card p {
+      font-size: 0.9rem; color: #777; line-height: 1.7;
+    }
+
+    /* ── Gallery (原校園風景) ── */
     .gallery { background: #fff; }
     .gallery-grid {
       display: grid;
@@ -322,9 +562,36 @@
       font-size: 0.92rem; color: #777; line-height: 1.7;
     }
 
+    /* ── 成果榮譽 ── */
+    .honors { background: #fff; }
+    .honors-list {
+      max-width: 900px; margin: 0 auto;
+      display: grid; gap: 1rem;
+    }
+    .honor-item {
+      display: flex; align-items: center; gap: 1.2rem;
+      padding: 1.2rem 1.5rem;
+      background: #fafff5; border-radius: 12px;
+      border-left: 3px solid #4caf50;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .honor-item:hover {
+      transform: translateX(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+    .honor-year {
+      flex-shrink: 0;
+      font-size: 0.8rem; font-weight: 700;
+      color: #fff; background: #4caf50;
+      padding: 0.3rem 0.8rem; border-radius: 50px;
+    }
+    .honor-text {
+      font-size: 0.95rem; color: #555; line-height: 1.6;
+    }
+
     /* ── CTA ── */
     .cta-section {
-      background: linear-gradient(135deg, #2e7d32, #1b5e20);
+      background: linear-gradient(135deg, #1b5e20, #0277bd);
       text-align: center; color: #fff;
     }
     .cta-section h2 {
@@ -375,6 +642,25 @@
       opacity: 1; transform: translateY(0);
     }
 
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.9); z-index: 999;
+      align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 85vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute; top: 1.5rem; right: 2rem;
+      color: #fff; font-size: 2.5rem;
+      cursor: pointer; line-height: 1;
+    }
+
     /* ── Mobile ── */
     @media (max-width: 768px) {
       .navbar { padding: 1rem 1.5rem; }
@@ -391,6 +677,17 @@
       .hamburger { display: flex; }
 
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .concept-grid { grid-template-columns: 1fr; }
+      .space-zones { grid-template-columns: repeat(2, 1fr); }
+      .aesthetic-features { grid-template-columns: 1fr; }
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+      .photo-grid .photo-item { height: 180px; }
+      .photo-grid .photo-item:nth-child(1),
+      .photo-grid .photo-item:nth-child(7) { grid-column: span 1; }
+      .collab-grid { grid-template-columns: 1fr 1fr; }
       .gallery-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -398,6 +695,12 @@
       .gallery-item:nth-child(1) { grid-row: span 1; }
       .gallery-item { height: 180px; }
       section { padding: 4rem 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .space-zones { grid-template-columns: 1fr; }
+      .collab-grid { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -409,8 +712,9 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">關於我們</a></li>
       <li><a href="#features">課程特色</a></li>
-      <li><a href="#gallery">校園風景</a></li>
-      <li><a href="#timeline">年度計畫</a></li>
+      <li><a href="#classroom">食農教室</a></li>
+      <li><a href="#collaboration">場域合作</a></li>
+      <li><a href="#honors">榮譽成果</a></li>
       <li><a href="#contact">聯絡我們</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="選單">
@@ -428,8 +732,9 @@
       <span class="hero-badge">Tucheng Elementary School</span>
       <h1>臺南市安南區土城國民小學</h1>
       <h2>食農教育</h2>
-      <p>從土地到餐桌，帶領孩子親手種植、細心照料、快樂收穫，在大自然中學習生命的價值與感恩的心。</p>
-      <a href="#about" class="hero-cta">探索更多</a>
+      <div class="hero-sub">洄海田心學堂 ── 產地到餐桌之旅</div>
+      <p>從海洋到田地、從文化到生活，孩子在這裡學會珍惜、思考與實踐，連結人與自然、知識與情感的美學學堂。</p>
+      <a href="#classroom" class="hero-cta">探索食農教室</a>
     </div>
     <div class="scroll-hint"><span></span></div>
   </section>
@@ -438,33 +743,33 @@
   <section class="about" id="about">
     <div class="section-header fade-up">
       <span class="label">About Us</span>
-      <h2>從土地學習的教室</h2>
-      <p>讓孩子走出教室，用雙手感受泥土的溫度，體驗農耕的喜悅與辛勞。</p>
+      <h2>百年學府 · 農漁交匯</h2>
+      <p>土城國小已有 102 年歷史，位於農村與漁村交匯地區，擁有豐富的在地農漁資源。</p>
     </div>
     <div class="about-grid">
       <div class="about-image fade-up">
         <span class="emoji-art">🌾</span>
       </div>
       <div class="about-text fade-up">
-        <h3>扎根土地，培育未來</h3>
+        <h3>扎根土地，連結海洋</h3>
         <p>
-          土城國小位於臺南市安南區，擁有豐富的在地農業文化資源。我們將食農教育融入校本課程，透過實作體驗，讓學生認識在地農產、了解食物的來源，培養珍惜食物與友善環境的態度。
+          本校位於臺南市安南區，北與七股、西港和安定區為鄰，西以台灣海峽為界，與聖母廟為鄰。社區以虱目魚、紅蔥頭等為代表農漁產業，民風淳樸。我們將食農教育融入校本課程，讓學生從「吃」理解世界，從「做」實踐永續。
         </p>
         <p>
-          從播種、澆水、除草到收穫，每一個步驟都是孩子最珍貴的學習歷程。
+          從曾文溪出海口到校園田園，每一個場域都是孩子最珍貴的學習資源。
         </p>
         <div class="about-stats">
           <div class="stat">
+            <div class="stat-number">102</div>
+            <div class="stat-label">年校史</div>
+          </div>
+          <div class="stat">
             <div class="stat-number">4+</div>
-            <div class="stat-label">年推動經驗</div>
+            <div class="stat-label">年食農推動</div>
           </div>
           <div class="stat">
-            <div class="stat-number">200+</div>
-            <div class="stat-label">參與學生</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">12</div>
-            <div class="stat-label">合作農場</div>
+            <div class="stat-number">15+</div>
+            <div class="stat-label">合作夥伴</div>
           </div>
         </div>
       </div>
@@ -474,56 +779,228 @@
   <!-- Features -->
   <section class="features" id="features">
     <div class="section-header fade-up">
-      <span class="label">Curriculum</span>
-      <h2>四大課程特色</h2>
-      <p>結合在地文化與生態永續，打造全方位的食農學習體驗。</p>
+      <span class="label">Four Dimensions</span>
+      <h2>食農教育四大面向</h2>
+      <p>結合在地文化、美感美學、科技創新與永續發展，打造全方位食農學習體驗。</p>
     </div>
     <div class="features-grid">
       <div class="feature-card fade-up">
-        <div class="feature-icon">🌱</div>
-        <h3>農事體驗</h3>
-        <p>親手種植蔬果，從翻土、播種到收穫，體會農夫的辛勞與大地的恩賜。</p>
+        <div class="feature-icon">🎨</div>
+        <h3>美感美學</h3>
+        <p>融入海洋符碼意象、在地文化彩繪與陶藝創作，讓食農教育不只是農事，更是一場美的體驗與生活實踐。</p>
       </div>
       <div class="feature-card fade-up">
-        <div class="feature-icon">🍳</div>
-        <h3>食育廚房</h3>
-        <p>利用校園自種的新鮮蔬果，學習烹飪技巧，品嚐自己努力的成果。</p>
+        <div class="feature-icon">🌊</div>
+        <h3>在地食農</h3>
+        <p>從虱目魚養殖到紅蔥頭種植，結合社區農漁產業與在地達人，實現「地產地消」的永續飲食文化。</p>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon">🔬</div>
-        <h3>生態觀察</h3>
-        <p>認識田間昆蟲與植物，瞭解生態平衡的重要性，培養環境保育意識。</p>
+        <h3>科技創新</h3>
+        <p>導入 AR/VR 沉浸式學習、智慧種植系統與魚菜共生裝置，以 STEAM 教育強化跨域整合能力。</p>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon">🤝</div>
-        <h3>社區連結</h3>
-        <p>與在地農友合作，走訪社區農場，將課堂所學延伸至真實生活場域。</p>
+        <h3>場域合作</h3>
+        <p>連結南市區漁會、返鄉青農、在地漁場與跨校聯盟，建構產地到餐桌的完整學習生態圈。</p>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="gallery" id="gallery">
-    <div class="section-header fade-up">
-      <span class="label">Gallery</span>
-      <h2>校園風景</h2>
-      <p>記錄孩子們在田間快樂學習的每一個瞬間。</p>
+  <!-- ══════════════════════════════════════════
+       食農教室建置 — 洄海田心學堂
+       ══════════════════════════════════════════ -->
+  <section class="classroom" id="classroom">
+
+    <!-- 學堂大標 -->
+    <div class="classroom-hero fade-up">
+      <div class="ch-label">FOOD & AGRICULTURE CLASSROOM</div>
+      <h2>建置食農教室 ── 洄海田心學堂</h2>
+      <p>一座從大地到海洋、從科技到文化、植根家鄉與未來的教學場域。<br>活用校內閒置空間，轉化為融合美感設計、多媒體科技與在地食農的多功能學習場域。</p>
     </div>
-    <div class="gallery-grid fade-up">
-      <div class="gallery-item">🌿
-        <div class="gallery-overlay"><span>校園農田</span></div>
+
+    <!-- 理念卡片 -->
+    <div class="concept-grid fade-up">
+      <div class="concept-card">
+        <div class="cc-icon">🌊</div>
+        <h3>洄海</h3>
+        <p>取「洄游之海」之意，象徵學堂以海洋為根、知識為流，連結漁村生活與海洋教育，呼應校園鄰近漁港、推動食魚與海洋保育課程的特色。</p>
       </div>
-      <div class="gallery-item">🌻
-        <div class="gallery-overlay"><span>向日葵花海</span></div>
+      <div class="concept-card">
+        <div class="cc-icon">🌾</div>
+        <h3>田心</h3>
+        <p>象徵對土地的情感與敬意，代表本校坐落於農漁交匯的自然聚落，著重田園教育與農事體驗，培養學生對土地的感恩之心。</p>
       </div>
-      <div class="gallery-item">🍅
-        <div class="gallery-overlay"><span>豐收時刻</span></div>
+      <div class="concept-card">
+        <div class="cc-icon">🎨</div>
+        <h3>美感設計</h3>
+        <p>海洋符碼意象牆、魚菜共生植栽牆、溫潤木紋地板與自然採光，師生共創彩繪牆面與陶藝作品，讓空間成為美的延伸。</p>
       </div>
-      <div class="gallery-item">🦋
-        <div class="gallery-overlay"><span>生態觀察</span></div>
+      <div class="concept-card">
+        <div class="cc-icon">🖥️</div>
+        <h3>多媒體科技</h3>
+        <p>多媒體螢幕、互動觸控裝置、VR/AR 頭盔學習區與智慧廚具，縮短產地到餐桌的距離，打造沉浸式數位學習空間。</p>
       </div>
-      <div class="gallery-item">👨‍🌾
-        <div class="gallery-overlay"><span>小小農夫</span></div>
+    </div>
+
+    <!-- 空間設計 -->
+    <div class="space-design fade-up">
+      <h3>教室空間規劃</h3>
+      <div class="space-zones">
+        <div class="zone-card">
+          <div class="zone-icon">🍳</div>
+          <h4>烹飪教學區</h4>
+          <p>智慧廚具 + 師生料理體驗</p>
+        </div>
+        <div class="zone-card">
+          <div class="zone-icon">📺</div>
+          <h4>多媒體展示區</h4>
+          <p>VR/AR 沉浸式學習空間</p>
+        </div>
+        <div class="zone-card">
+          <div class="zone-icon">👨‍🍳</div>
+          <h4>學生料理區</h4>
+          <p>多功能教學桌與實作平台</p>
+        </div>
+        <div class="zone-card">
+          <div class="zone-icon">📦</div>
+          <h4>收納展示區</h4>
+          <p>簡潔收納與成果展示空間</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 美學元素 -->
+    <div class="aesthetic-features fade-up">
+      <div class="aes-item">
+        <div class="aes-dot"></div>
+        <div class="aes-text">
+          <h4>海洋符碼意象牆</h4>
+          <p>湛藍水流與悠游魚群，象徵海洋資源與環境保護</p>
+        </div>
+      </div>
+      <div class="aes-item">
+        <div class="aes-dot"></div>
+        <div class="aes-text">
+          <h4>魚菜共生植栽牆</h4>
+          <p>展示水循環與蔬菜生長，學生親身參與管理</p>
+        </div>
+      </div>
+      <div class="aes-item">
+        <div class="aes-dot"></div>
+        <div class="aes-text">
+          <h4>溫潤木紋地板</h4>
+          <p>營造舒適學習環境與自然氛圍</p>
+        </div>
+      </div>
+      <div class="aes-item">
+        <div class="aes-dot"></div>
+        <div class="aes-text">
+          <h4>食農意象彩繪牆</h4>
+          <p>繽紛蔬果與魚類圖案，呈現永續農業概念</p>
+        </div>
+      </div>
+      <div class="aes-item">
+        <div class="aes-dot"></div>
+        <div class="aes-text">
+          <h4>自然採光設計</h4>
+          <p>明亮窗簾引入自然光，開放舒適的空間感</p>
+        </div>
+      </div>
+      <div class="aes-item">
+        <div class="aes-dot"></div>
+        <div class="aes-text">
+          <h4>走廊木質植栽</h4>
+          <p>木質裝飾與綠色植栽，溫暖而富有生機</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 照片藝廊 -->
+    <div class="classroom-gallery fade-up">
+      <h3>食農教室建置紀實</h3>
+      <div class="photo-grid" id="photoGrid">
+        <!-- 10 photos loaded via JS -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 場域合作 -->
+  <section class="collaboration" id="collaboration">
+    <div class="section-header fade-up">
+      <span class="label">Partnerships</span>
+      <h2>資源整合與場域合作</h2>
+      <p>建構在地食農學習生態圈，連結產地、學校與餐桌，讓食農教育走入真實生活。</p>
+    </div>
+    <div class="collab-grid fade-up">
+      <div class="collab-card">
+        <div class="collab-icon">🐟</div>
+        <h3>南市區漁會</h3>
+        <p>提供漁業知識與食魚教育資源，深化海洋文化學習。</p>
+      </div>
+      <div class="collab-card">
+        <div class="collab-icon">🌱</div>
+        <h3>返鄉青農</h3>
+        <p>在地漁場達人入校指導，分享產業經驗與永續理念。</p>
+      </div>
+      <div class="collab-card">
+        <div class="collab-icon">🏫</div>
+        <h3>跨校聯盟</h3>
+        <p>推動區域食農教育合作，建立教師專業社群與交流平台。</p>
+      </div>
+      <div class="collab-card">
+        <div class="collab-icon">👨‍👩‍👧‍👦</div>
+        <h3>社區志工</h3>
+        <p>家長與社區民眾參與食農活動，強化文化認同與連結。</p>
+      </div>
+      <div class="collab-card">
+        <div class="collab-icon">🎓</div>
+        <h3>專業增能</h3>
+        <p>線上與實體研習並進，持續提升教師食農教學知能。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榮譽成果 -->
+  <section class="honors" id="honors">
+    <div class="section-header fade-up">
+      <span class="label">Achievements</span>
+      <h2>歷年榮譽與成果</h2>
+      <p>多項計畫與教案獲教育部、農業部與媒體肯定。</p>
+    </div>
+    <div class="honors-list fade-up">
+      <div class="honor-item">
+        <span class="honor-year">2025</span>
+        <span class="honor-text">商業週刊 1944 期報導 — 漁村小學拚出 5G 教育元宇宙</span>
+      </div>
+      <div class="honor-item">
+        <span class="honor-year">2024</span>
+        <span class="honor-text">天下雜誌微笑台灣報導 — 食魚教育新浪潮，從餐桌到教室的文化傳承</span>
+      </div>
+      <div class="honor-item">
+        <span class="honor-year">2024</span>
+        <span class="honor-text">5G 新科技績優學校 — 全國唯一課程特優「鱻魚之龍爭虎鬥」元宇宙</span>
+      </div>
+      <div class="honor-item">
+        <span class="honor-year">2024</span>
+        <span class="honor-text">教育部校園防災議題數位教案 — 國小組優選（全國三件）</span>
+      </div>
+      <div class="honor-item">
+        <span class="honor-year">2023</span>
+        <span class="honor-text">臺南市環境教育績優學校</span>
+      </div>
+      <div class="honor-item">
+        <span class="honor-year">2022</span>
+        <span class="honor-text">美感生活學習地圖實踐計畫 — 全國優選獎「米羅．洋流 @土城」</span>
+      </div>
+      <div class="honor-item">
+        <span class="honor-year">2022</span>
+        <span class="honor-text">農業部漁業署「食魚教案徵選」— 全國唯一特優＋優等兩件</span>
+      </div>
+      <div class="honor-item">
+        <span class="honor-year">2022</span>
+        <span class="honor-text">臺南市學校藝術教育貢獻獎</span>
       </div>
     </div>
   </section>
@@ -531,30 +1008,25 @@
   <!-- Timeline -->
   <section class="timeline-section" id="timeline">
     <div class="section-header fade-up">
-      <span class="label">Annual Plan</span>
-      <h2>年度計畫</h2>
-      <p>依循四季節氣，安排豐富的食農體驗課程。</p>
+      <span class="label">Roadmap</span>
+      <h2>短中長程規劃</h2>
+      <p>從空間建置到永續發展，逐步打造食農教育示範學校。</p>
     </div>
     <div class="timeline fade-up">
       <div class="timeline-item">
-        <div class="month">2 月 — 3 月</div>
-        <h3>春耕播種</h3>
-        <p>整地翻土、認識種子、學習育苗技巧，為新學期的農事做好準備。</p>
+        <div class="month">114 年（短期）</div>
+        <h3>空間建置與課程啟動</h3>
+        <p>完成洄海田心學堂空間建置與課程實施，實施社區交流活動，啟動食農教室運作。</p>
       </div>
       <div class="timeline-item">
-        <div class="month">4 月 — 6 月</div>
-        <h3>田間管理</h3>
-        <p>澆水施肥、觀察植物生長、記錄農事日誌，培養耐心與責任感。</p>
+        <div class="month">115 — 116 年（中期）</div>
+        <h3>深化整合與示範分享</h3>
+        <p>整合優化在地食農遊學課程，深化 STEAM 跨域整合，參與市級食農示範與成果分享。</p>
       </div>
       <div class="timeline-item">
-        <div class="month">9 月 — 10 月</div>
-        <h3>秋收感恩</h3>
-        <p>歡慶豐收、舉辦收穫祭，與家長社區分享成果，學習感恩與分享。</p>
-      </div>
-      <div class="timeline-item">
-        <div class="month">11 月 — 1 月</div>
-        <h3>食育廚房</h3>
-        <p>利用收穫的農作物進行烹飪課程，認識食物營養，培養健康飲食習慣。</p>
+        <div class="month">117 年以後（長期）</div>
+        <h3>示範學校與區域聯盟</h3>
+        <p>成為臺南市食農教育與美感場域示範學校，推動區域食農教育聯盟與教師專業社群永續發展。</p>
       </div>
     </div>
   </section>
@@ -563,7 +1035,7 @@
   <section class="cta-section" id="contact">
     <div class="fade-up">
       <h2>一起加入食農教育的行列</h2>
-      <p>歡迎家長、社區夥伴與各界朋友，與我們攜手為孩子打造最美好的學習體驗。</p>
+      <p>歡迎家長、社區夥伴與各界朋友，與我們攜手為孩子打造從海洋到田地的美學學堂。</p>
       <a href="mailto:tucheng@tn.edu.tw" class="cta-btn">聯絡我們</a>
     </div>
   </section>
@@ -576,11 +1048,58 @@
       <p>電話：(06) 257-7645</p>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 土城國小 食農教育. All rights reserved.
+      &copy; 2026 土城國小 食農教育 ── 洄海田心學堂. All rights reserved.
     </div>
   </footer>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImg" src="" alt="放大照片">
+  </div>
+
   <script>
+    // ── Photo URLs from Google Photos album ──
+    const photoData = [
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczPADBJaeVSSFInZjJf0H58s6tup09aTC9JsM2tr0bDLa7u7AfqrZ7HOu96Mhz5CoaXde06SgIrlqFRKYTEWZWI4HNxmxBFlF9TIxunZneSNb5NMhf_lD7lnjHDDyt1_L39Q_YUha4doevEnmsNnvKypo4Eh4dV8ayxtkmv1t0xCB0ibTg5Rtrapq9hShdP0itWVy_ja6MxjYlMKGFMY8V4kd4Bptj-x0JPIO_ZSH8GPuOpbL4Yzs0H-c4I0yvw7YEQf4QZirTLwGiquaAUckuF07EH6SCGOso-G_cNHNOlAu5S6wpMeK0syIQBRXSA3NWAGgBzeLL6OcA8CAnuSGLnysdLI7A8P81jxaU515AA1u29VqEj6IDpp3vU1EhlDIgj2etdfgRIgg9LxU5xtii6-PUEMZykcZzeXs8AzWMmFpmDXkXliavfkuw2u93S1OCDjH7XnERcpxH0wgqEN362DifGI6tQAdOdvv0arOwXK2UpV8-xwkxSmOPm60EsxL52HG9Ul8Fs1PupdgSdmoDAQTMN4wkTtHvh7S41DsodP3AzbhHt_iHnpl9ROc8pyEmd90KP1x7bNnfQrtKP8gj8gMF9tF49gwxRCsot7u_AdtGj_a5kAY9HbwmMCr5AXwgE5DGdueYMhsYSYMj3TnYw5CWvzDdEPmb7neNQ14saF0ovTy9oYEw8Y6YrtKm9-3HAeGTHETWHIiZvhIYRNwV3l3-ayqmJjzG6CiGXrj9zjHUvfcJS8pZKnM6LOqUrKvV34HPWOF67H8gaeUkyHth9akbIraV5u-lNaMPCByKvst-CxtXFGxVnKRtkofKEDU2qA28cdrPvFBHA8fxeVl73twcMCYqNjcCQBRf3VSJW-wXSQ36V5JoZ1chCk0gn2fsJcuA3UYkk7SYuWWY5Bl7sCw8zvBWvdFOXjL2B2q_3bUywZJqib7Xi6JeGhKWFhbkC0qE0naxoGXO7faxaehQLWjtJynnGJTyC-8z-h4BUzxcmkrxtroP9rHohX9lW8p27QO61kyrl0nAZLUQL4", alt: "食農教室建置" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczNwui6bXE_HSTkGpYp5jAJVyCUgxflRhEt1VhFGzG7y1Ezr1cMwCJADGKpKmMQnxveLeqiwBUI2R8nw7Mh8TkoaLe7TNdOIHEEVr9NugTEv0gcAIazB5o5KxAfnPpfKTS9nuW4dg7P6_KmZfrEmJTSjlf469tqe1SocryOd9Zz2lWAu0KCSOrTM0Pbo39B-7kcRZo34RkdXrKniz4JtdNJh6uNqyCXf7f14LLLqsHv96sJ66CWobcdxPT5ui8WRgUK4EdpmGA-K2ac6uPRuyPZAyiTttrkFLs0ZgNapMizI-uQcOpJZWPTKmUC27R9TjezzKQHr-Vo2Un9-9hhj570CbNn8cg56QxGG-WOKDUZMyU8XiHjoVGtkow9o3pwBtnu1F169JEaoeyku3qd9UiIg5cLTFcCxTx2k1MMtasw_JcJfy_PaDrt83jWwUheawKs0xYBtz_tFCFIF10KTZtY8yKu8fYwBuEDV5QJ6Wp4AYAbGTyXkFz8TbOdHbZzegvpOaB0FJUt-w8iEckFAq-C_RYR-jfmVo0JToFTQQ6JRLutyLxKxsScDACYjZHdTBFJKg3ZXeUFVhQPKAwSH6xD-17CDeXn_r_t7-Q4vFPw-tkWJIzyu3aeRfWBiyJI-gWsGH8WOnZ3KeG-2LGDQWCX_CJY-vYhoNFxYnGP7a1YEAINLtuW-FGfTiksToUjQOoj7yg2R7fHZ8gKcAm5a6EfL5iJNGJmu3L2xqCGIkwICAat9Fq8AiRZ1x3HSiBFQIt37Wv8G9Amh1uUPwh-cFItNON0f_ZiHsAcDndctWDZ5_xPAYNafftccI_ro2bNHXkttv2FcQjB1sGoYCtf-lCIHInlPEpk9syIOHfzjYBzYMQSof4p5UmvvyDmR4ZV3Tse-ZVxcQbpSu9vhTeVnGTBvzV0rwgI8zgWmclsBlwS9mRvb5Wv54-exFOuGgUpA2dg4lrJ2OgKM2HxNNtpYS0w_rWwUmirDv7cLZr-_-An987lcGmjkZ0rh7uOR-POs8Spth0AsHi_NQerKGXGj", alt: "教室空間設計" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczOC9OodGFW_hIE5F44ZpHpN45cbo9f3NLTk-EjA_Q9iv_mkEyjRzirhFevZfXqxMno0FG81NzRv4vSqDKIklUbNI4_Zp6yMlmn-QVMPEXMqJyAxiJIs14mqs3Z6j0QON1UHMW49_LyMkE2X0W81hxj-q0UJi9Rb4YftQ0Am_s1pdFNf5uHOnzp_UNiugUncshIwtUOqxa0b2m0l7qOkIRsm1O235HKIDLF2gbRkowcppmSk4MfUEo5WAdYT7lc1GNGrE3KJ_1QrMbGSRXR1-5EnVX8WZJADjh5hRl1YbW57hh-qD407qySIYVNThsAqpg1JIa3dBNJhbKVvEMjcEHFjJ5gpu74VfQ28mrVb0_I1w_PiUxbPUAKvecmfa12QI_xOueTMnEZwKIqgiAvXJBWjFipol68sE2b0DOPl1w7rvIXrbOtaBZ9R1wlhOkKk_1nSiVVtbU6SitDVAP57_YwZIGnhfMdXQvHixKPXrApVyuuGRk4b8M9BTVVROTCHLDbK3Xv1zpY0p6d-tucdC_hvSydwi9SZvK18YyLDntoaRKV2c6iikvP-BNWCTU9_13B2BQ0LY-QIN9yEcAu_R-yB58AuCTUlFr-JD8vOhnP7TAs69m-rYq6FtuiqmQsfR4FnDqIjq_6R6A7Q9ZkN6tEzejNXxbFa0-Wwlz5hKXpVCAf17lxCLIdaqranxWHRWLmCh1bd9nCF-NBySxVx9TLYLaW6mc5raNqIfThBVK9KN40VkKmP68q5l9iiZE5JSfdwLRdFIrI4lLuWy71HIl1lOyPNkmnHhwg_weVZ8o1m0744IVEMWdbXHsjilcrjb8Gk-H2GwN5jv5C2nl203UZiOCmC2Is0KjyZtgAZmO4Q43EXKb05T0YUsDJ_Pe3KyD4NST49aRN_ejiDvDe5Thx-hOwMF61wUVRurMDSXEitZszV7zZC_s1ngxLMr1wqqMlaTBABiirDpr98j-5UEhwchZ1L6Wi4tsm4SU9rBx57rsdl7LkVZSXukn7eBnfQx_tj-0cd-tOG8niBSH8b", alt: "美感設計元素" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczPwLFcJ7OHZbhQd0LrpHNV9-5p_2d8p85wC8g_TV0vs0WpTVSqfvkBr9Oiho98CiRzCvR7GcFt-Hu6J5uxywAsSPkwfScscJpF3UWgld4-XblM9xt5yMtwXRj-0DvcSfGzI22rWWNGvcAGcxMr9CCsT5XxbKzmksQK1PTmQlQu0B8xB6IqxcI6r_REgZLRNn74gq5UkDbHukEAMsofbocis5azhAU0KC1fFeggV9WLW7wt6VBOhEykofSQQICJdDvIDHyEjHP1yCXydP8IyUQOseBwn-UfuSPGQlnBLT4L1pwdxaDspVrU5QfZHmqaOHWWhnt-zgwW_6uWYNUKunY8M6lsXm8a4Asu2rj1Cp0BAgFJH9R3QaQmuaCD0Dt8CLo6Ooi6BLex_yB9PqzlkF4ssXiB2djZBEzmISC0lrZPREUpvJ_PXufNx5fVNSUHdHpLsW6PqLh6EpQU1FPX_qOkw9OwhVxhIUoyqF8ADX2pZH9ObU_RO0BuQ3jiddCjBLxxp5hhe3M_ZAvKKO5HUlMLYWWK1b4uuVhwWkz7MwRdbNpGFjdUQZfm0ts7jdnqJoowGF1yjI3AGT3oDsfy-jPcsinLOolQZDJMnMXgWQCcOqEDrKAK97Jya-xn9OWl3ktLJhUGl2QTZxnPzWibznuEVZ9MT6FkWyrl7boBtrycKpf08H8vLXx1GlDCnbjwn-EMd794ydmxwPrySe2JK8jc4nFg8kUYXIM1w3Qg0sxUaPyVDf1PjR5rGRyui1ZOPvPleSQvfPyZCY5mZo10aOLmxq3dHOf3eFJl_furQDsD6UW-oka_dFloUlF6IwXBc0AoPdt-qkYfTdQwsT9OTOwUlG_uWvL7dP8FY7E0LvsSYL6A4UaqFcizWWRUkiiqsFIltCJPq6WUVKrVZtQBUNSGgxhBF2WU8hydwafc-ysovVsQETNHE3KV05mkxO5XqUWqlX-GT3ehYGq5Aps7ZkpduOp9YnDlryeNcMcr3yfF_HTow3J8CUod1l4qvXX54D541AMXTOyuAm76tVajm", alt: "在地食農課程" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczNyiMKiTGev3qSQDYy-hFOMudgjPonsTqnNoOj0CFs7ZXsWmPaznSktGIGK390f6x42EXOZwumQBoydkruRrQB7Md6osmanA1ikOxfCz9tRvvsuoIWDBopGwOF-c88pwpd8r3vDP4bj3czHJdlos3Ku-weup0tWbBUY2bRPB-sAhUm97Kc7Y192TNAGYVhWLMIJv9Mc2obP-b_9ZGIoQR9tXuFHk2P5anHL8xA3h4v5L21RnhOAXhaRY2Ap63npKmWmKaxifk0jgk_kgRwiDsH-x4xlPvJ19Ed0K3-J3h5bsuyb09NiDU1LoKPwx4V5RFl-LXVQeARMeVNzkdLGataOH6W6mYa76FDFZTvrepo5VCMX0I_AuZhbokTJWYcNlPQhPA2DojQX9sN8ZQVClh2ohZygkuFyhw7hOYdbth6V40F6ekNIq0idCymt3bPXWf4HZq0tMZKqvaPJ7jKemUAWSvX8uNTrS2tM3zuUMaLwmKXtbgp9tdOHHR0e5C4YOkdPGYo1Az2vBC7D0Me_tMBML-FxiWe9kxaPhsHsIfxoVKyJQcjicdzqcXazC7eWOCs4aJpAFrTFmjjrJvRcz9ja8SPI6O2c2GqJDHiX_HedfExSfp4R6_VDwtM6JMrts3dtN9aj96p6adKRtpXBvnOap2Ntw4AnrAjJa_wZDOwXGyJ97ZrzxIbC-bKfChtA6P3P0QYaqj_9ltqZ-m3D4zxCbVcp3JucRZ_vQPgRdGCv-AtZu_3rOgcO-v_rqiGoPgO8oJUM2TBhx-uYpO8wcdpKsstO-WPJh5Ftkvk2T2LcsJXTPkzFUb2hOQ2PzXZ4ALNhuLeb_aWyGLEvr1kM0fo3lY_TNSFKmP6j1Fp_J5PVgjlLxBsmEROT5ocys823IJSHI5BCS2_FcNYx5bi7MEmP6QA1SgaaDdumv_cc7l45VuRPSPMd3-Z2cz3nvUHFDB_mJkhLCXYZ6-chaxF6XRgGc7KhC1nHkyTxqpSRdH5ynCh-d9O6iITSdAWgc36nzRx9ZYIojONbTZpQIsKw", alt: "魚菜共生系統" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczO8NUQdgylhd99IdVDu-S1yQcy0GXWoJaoVQVWwh6bbNQ2_tyW7fcEo1YSqUyNVwcEVlCb-D3Gksm1ol_XgbEgl8BgGWqikAXYQXuoGVdk5_JQ6y4f20oO2wbz1EOGIMa3UxhIQ0cvd9WD0LW7Y9DMHMaieGnpSyA1jcRcgl4mYTV8aeRRtC4NcZ6MgVKmM7zeYTagIUqUfvJywl3cUG6UTl-Zt21Q2DixK-T2X_vXGczcrumXmlSEj9oY-8ea4Z12B6nMQHhGNueEPKwzcqXxFAkTBllGjOcq-QH8J3Bp-gr31s7C7Nu_5e3qOVD3nU5k8xtYzRDQOFtCtGCh_Qg1_eIwCZ-PRBfX7L_0oNl_tI73mGafXQvwE7IxT3gLrFWOpvqn6RQwdoA3bzT8Wc7SNEe3DIsBVAL8bzZABwON0Im1K99U4vmVEXnarbXLHAo352vqquZW83KjG-DO9FUshnGzT5snh43Tro8YweyGuFgdi2lVv01h05rx09kQh4kD3fFL_CNHaMkuaXCZHGz_GXBS8x_1BMYROyRNjl9I0pR2I8OIU_vLpoYSrWpkw_nwHPtKwbcrKRN8-JG_t7TUHlXEAZlXr4BaakF4wafA4zABgaB0G0aAPyZtZTJYiDVi1Uw8ZVDV0O7g9ll5eOKFoKmBjr8OIJ6XpmW4RAqzqyzPENv4p22p-xASE5kNW5Mh_TzuXoPffWs8Q2j8Wiu_sjYYylHIruPNYL6VekOBsICiSKzji5WgFC9-ra6rRwhw410Womg9zayENO-feW-tMqqFbzJHiOirWt-ulNY35pY5VKIBSasKrvAmofmeyZF-GI7wznMTuzehoGxW54RkhGhdpcRItX2yxFv0xrqF5vJeVFE4wFrMXrlwnGyKchRawIztsqiS6GvBWEfz7WNt3D_d-QL1AKYLr2FSdl7s89n_KD_rRMZe3Fh9cPVos9d-lhk-_B4fPRXkE5f40zMl9uNRnj-CgidyILVD9JBS9TIpt_ttV812u0-EWRCdwHaaxEA4r9yW_8a0_GI_4", alt: "海洋意象設計" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczNdi3ryMhDaW6ppfSuFsFQlhUBYd3sD2fvMeAT5FOF-tNzZjerhJSHzDajjFQKV80W0Ap46kcp9IHh-8nzY7rGWxYd7qFG6XXC3KsEszwIIdH_iBd1OBkeNv5cpSeUcDssIJag1LKErMFnRQRTFVmRoSfCZqsf0To9QSnYtS-74b2xzcb_qSkaId7psEB6heRRsWBdRXgDHSG9tcG5Mipw4BM38S3TX_kixTz3e_RGFsIEgZIRJ13wY8mJtGv1JOZSkdNoaf7egUY214FmHaNuoOx_VUjQgYdqePlvifMP6qHKbhRVxnmxhV9rpotK2wifP9DnRoQmOY_T9v68kyPglx0s0CWNu5m2qLV0a9JSm1wt6HF7eEhCWXHdQfyBx2L3u835BGKkqL1U2GPYbkCU6xYzGpWoRCA0tur0oHpwrPSjTnSAp1o51u2eumx_tCmnUJ4ZBy6oCuGOQZRN4dcp_XzlX9D7pK8H8hFwGPslFatylod7bHfSWfNJ8PamhCkUQqd7v8HRsAXsoY0jV52RNYfF1y3Ui2fd4zMoiJVmtCBspgjqLXDsJdkC1vb3Lc7WAYWwka9bkMPehjb6ItSje0P2bA7i2y7oxpmz8Jw2k2Eqj-4soHgAhinKXGguk1ukkFA-Pd7UTVfc1d8Awq200jqRGcu5wlvi64r0ws8PHH8yWK3_wJ3eCE9ZrGAS17dNgDpTWpc74Sy_F4tygzOmCaqwIpbjv5rxvHO7cGbnzM9eNvs_0le7Ly3h0rdYTuv3gCeSAZ67dPZUtac-GlywOdbl5Z8VnPD6Zteeo-YSPzlCC6TD6balMjhIJiIaKTURVz4Z0Ucv37KZJcd43vsYXirb6hqb0vV66tlrcpsB9lZkaXi01r6JUHrjU-xFS-h6OsS2OyP_d0mkY8kCbXC3iQzIxad9jeFISwbDOn4oZ45VmYFI1CRZgeinQWwp0Y2BLlX65MejGyhmr88dJm6o5EjUvwE2Cc-ZJ8uov_o0qPiicpBUbPNrp3D155g8FzBFRHhsQo2gMmqBlBFyf", alt: "學生學習活動" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczONyBgQPz6iUdXKS-Pf-59-p4tIwpTaKltWV5KQPXI3HaO9fQWX7xiUkbYNcMcTfvr6veUIUyisQNXcJ4ZgZwNg_HzGegn6NSqsQyFFNzEdQPQ8JVsJn5Kz-u3127_-56zkudhu-z0TeguRmJfqYtEadqo9y7KSFtJl7jKwvzvi-waBZQ8bRqsRyPrWSCHFx9cBzwGTeohLVLk_tiHhVMrH6p_9sZVD6lK390AptW74kAA6hf-OMNqr5RFNZKWTk4DAnavWmG9iepHrYuOgQkJKsAg4eaqWstLDg0kI6U27brDwkJMeiP6X6H3agTnhxAj7ZP_whWkPXUlQN6qdO6TqR5nZdrx5yC9Dibt60QzWtt92hkJYXWyeC2EFtG3xV_noUx-ERqvwZfIN6ojtnIMsDBEp5woSsgJ4relsFAold3vvDOGQbBw28hg7ar_hD4McC8cXBLDRE1-62V6EzADoH6ijdovOZaNtLMM_WB8RpM84XRXPufgcj4vQL4alanAq0U66x9iQpHVXHSzrEClWXkNR5mTT4OrfPCfyPeboIFPdv6Nx9d9JwyuOOjHaaR-zqTTXw5fIMeSD5vCSE2kqaRSSxAZUfoo3hSWBBhkllACISQbZM3FXVCRMOZx5hjcf3dcPxN96SD8HNU-emHHpzzwAPqMDBdQ66O3KPq-GAshQHuCmTnf5dWEfuMrjFqHnTjzuQnEOi3-gkfSN5ZACNhScpuaCcndqYgKefkJSqHMscrKzvEv-RZ9joP6SoGy19K86hfr8FG4jzQAznb_KJd8Jq7QPa2hMcTlHHE0c3gPZ1o3ph0OM0_y0KfC9J4OH6zsSCoaVOUFygS811fvPsMRJpfeBH3kn3BROXVooD1noRB0L2O6-4z2TGY4lESxHB3d2gfVctfbYkGV7Vplhxf90LBZ9hyWQLSIqqGLd8s8_pC06BJdi_XelsqYFXsJhuTwuanHJuUugsBg8T6hUCDfBqdQk3U5VhKuf5FidFmC-VttXXKUAeoFJ5QqprJp52_9kIwQlqDvK9JgG", alt: "走廊美化設計" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczNpIKYaF62eSoE_zOxmv4GGDxsk4u50HlZ_5yV5bQhH-R9EhwCSVmB_KYacKMGysjnY4cDh4g9gz_IGKnss_MrSIEGveG2l0Mncqsm68u8wmyqXD78nV1ybCeLo5Hg9_VZOB1rimeipBsRAZWFtPE-lBAc0KHjhMsfXaC8LDzuly7vXNqwBGBTdx8LpOY1z0wXxT59M1VUNyjhoeYQbqD9VSheAaqFUkh_PH_D3qjmCFQnTgysVxUnyasusePHCKzGaQA5JKR6rDyQFhKCGnbJOy8fZXk2Q3WGP84AUgz7erLTW7PuswjkpyAalEpmL-kbSdA-fGLYvFofk-5MXVFPBfHfVqLDXK7RTyRERpxrm0NJ1PAZmJjHLtHpGprz71fY9CQPwwCxq5hhyV9bse1r2uvSovLgYqFYqWR9qtJ5jp4GggvXuB-c5B5C7_qmiWVsFHazbyVf6h70A7Qv0ORn-RvXldJKVxAQvL_PFJuFCZQ-HO48RU1XsM8vH3rU-ROCVkONtXvWT0y1vt2Xk4Pw8gzLazQefalMt3tbMHISfe9tXlZHVLjUNYpfIAZx3d95EyoIDvKZMLXhbeeu-b4eZ1xBRes9hogIRCL-sYrHj4jSKJnYX4yuuiSiSifAPmTOOr6iQDL-_7tDittKam9WG3yfWiT-b2576g_t_OUoDmx8bPMvAJaTq3xSyQNGUIIbY212BVNWLR_co4QwyucdMrZcBPgGKEmKfrr28W8lP-o4zrluw2xyT1oEvEEUl4oQXN1wONQy7aVnF5l_YIU183cDzHWkHKe-vaW9u7HWvqWdK3yZouE6uHdyWS2wrIs87AAz71dvn7GPCeqTPV4f84IKO5L6jvBafqTvDErha0RwN67eSWJrB0njtDw4w9uCsUv1YFvUbF01p4yOx9hzPIOJTu6gY6p8-grkZXjQ6_MTxakfxk_TVTGAc8px5w1HcVBUMdj9rgxzE1QXjVva2GX9wAyCq41-X-0dZxlP4l3WfA0xlLy83VFc4DQiBvRBfzcaCtO39R0svLfsR", alt: "教室改造過程" },
+      { url: "https://lh3.googleusercontent.com/pw/AP1GczPcUQrlLopvTXTtqDVy92nJZGDpNAOjhQ7HUKRSPahG2dyo9Tkm9ryvJrHkDTIhiaTafq6NCcONXhRMaTOIxENqdUZ86IQ2-oj-bBUAKNS5gnZ_suMsIEPU_VtV0l7nghtZBRZ-VL6n3e46ftFJSUmMxPh7eK8Dd_8ReT7TtaSAWkxc6dUBW3sR5GR-4HfmwWbt2z0DSi5olSrCo7i7haizRREY71oaLpYHHNgEv5qRe2ic4z5jyeD6bNi_EzjHoW-72LGwv236Xa_t9NsU0Ok7jipQbFRFeksDNXPa6A9jdmTjmkm8lY2SrtU6hg4u_XywTRwcDDWF_qw6XJUnRr8ZG_UOHPM-z8rOVHtm0MWX6vV8VwbpwifWU90sPqu_kbOvT2pe4wkrtZKto3d1ZfkcOj4cFUNmzUJEr_dLekn-gnNMuW3mYNM9osqK2K3oLmNem5K_VP0GpfrJNk_O9v-2scaPDeFBJ5rhYpWsh_iMh6zsxyUpvI-eEvjGYKQz2dDPkDe749QGKVBMltLuC8IvhPJyzMsv6FyqBQkcJQzR1cbtpNen5LBQYhGCKFl-LclE_338_yLOHpieHGdE58m8h6v5akw4A53U44LAFmHAUKgHqcsuaSWTgqlJDNcvXy7r_PJP8_ug-a15bxeX_3AS0VHsWsCYQ62JTyDxt4sqVf4hS9ux5kl56TL8i6zombeRYQneyfd4SaHmW2MjbHiLvd59KCJ39i4eGwSE97mzBAacWGSnLSbyJ-xcLbK_E3ntGsKg4RNUzwYQVLfrSW4TKATHFYY-VkjGtbMvOvaQe1niSyGmOX1W5MmmY3KONHOJSFj74p_A9XZ8RQ5V0ZlUnN-h5JpEcwoRKKuWvkINd0zCwInSQKA2w8oZhVsyAVYHAQEpZVjPmEFMiurgO7XVlwBujYxxozt2VehKJYx77NX6lPCv6Rio1Z8cK9lTbbTBCwcJvU17yHeeaZB7uxAUzU9G-Bb_0aqrYW9NVJxJB39zu_Yhr-DxSXvUbaeoTieMylUSz0hmDRFEzop0", alt: "完成後的學堂" }
+    ];
+
+    // Render photo grid
+    const photoGrid = document.getElementById('photoGrid');
+    photoData.forEach((photo, i) => {
+      const div = document.createElement('div');
+      div.className = 'photo-item';
+      const img = document.createElement('img');
+      img.src = photo.url + '=w800-h600-no';
+      img.alt = photo.alt;
+      img.loading = 'lazy';
+      div.appendChild(img);
+      div.addEventListener('click', () => openLightbox(photo.url + '=w1600-h1200-no'));
+      photoGrid.appendChild(div);
+    });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -604,7 +1123,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
